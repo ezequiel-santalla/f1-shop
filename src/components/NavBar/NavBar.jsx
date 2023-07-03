@@ -1,8 +1,15 @@
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 import f1Logo from "../../../public/f1Logo.png";
 
 const NavBar = () => {
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleClick = () => {
+    setIsVisible(!isVisible);
+  };
 
   return (
     <header className="bg-black">
@@ -13,14 +20,8 @@ const NavBar = () => {
           </Link>
         </div>
 
-        <div className="block lg:hidden me-3">
-          <button className="flex items-center px-3 py-2 border rounded text-white border-white hover:text-red-500 hover:border-red-500">
-            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-          </button>
-        </div>
-
-        <div id="menu" className="w-full flex-grow lg:flex lg:items-center lg:justify-end lg:w-auto">
-          <ul className="lg:flex items-center mx-5 text-xl text-white font-semibold">
+        <div className={`w-full flex-grow lg:flex lg:items-center lg:justify-end lg:w-auto ${isVisible ? 'block' : 'hidden'}`}>
+          <ul className="lg:flex items-center mx-5 my-4 text-xl text-white font-semibold">
             <li className="mt-4 lg:flex lg:mt-0 lg:mx-6 hover:text-gray-400 lg:hover:scale-[115%]">
               <NavLink to={"/category/t-shirts"}>T-shirts</NavLink>
             </li>
@@ -40,6 +41,13 @@ const NavBar = () => {
         </div>
 
         <CartWidget/>
+
+        <div className="block lg:hidden me-3">
+          <button onClick={handleClick} className="flex items-center px-3 py-2 border rounded text-white border-white hover:text-red-500 hover:border-red-500">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+          </button>
+        </div>
+
       </nav>
     </header>
   )
