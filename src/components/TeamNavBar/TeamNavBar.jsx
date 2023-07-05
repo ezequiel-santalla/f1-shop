@@ -4,7 +4,7 @@ const TeamNavBar = () => {
 
   return (
     <div className="col-span-12">
-      <ul className="flex justify-center mt-8 mb-4">
+      <ul className="flex justify-center my-4">
         <li className="m-4">
           <NavLink className="focus:bg-black focus:text-white focus:border-2 focus:border-red-500 rounded-xl p-2" to={"/team/alfa-romeo"}>Alfa Romeo</NavLink>
         </li>
