@@ -1,5 +1,5 @@
 const products = [
-  { name: "Alfa Romeo t-shirt 2023", stock: 99, price: 80, id: "1", idCategory: "t-shirts", idTeam: "alfa-romeo", logo: "../img/logoAlfaRomeo.svg", description: "", img: "../img/tShirtAlfaRomeo.jpg" },
+  { name: "Alfa Romeo t-shirt 2023", color: "red", stock: 99, price: 80, id: "1", idCategory: "t-shirts", idTeam: "alfa-romeo", logo: "../img/logoAlfaRomeo.svg", description: "", img: "../img/tShirtAlfaRomeo.jpg" },
   { name: "Alfa Romeo jacket 2023", stock: 99, price: 120, id: "2", idCategory: "jackets", idTeam: "alfa-romeo", logo: "../img/logoAlfaRomeo.svg", description: "", img: "../img/jacketAlfaRomeo.jpg" },
   { name: "Alfa Romeo hoodie 2023", stock: 99, price: 140, id: "3", idCategory: "hoodies", idTeam: "alfa-romeo", logo: "../img/logoAlfaRomeo.svg", description: "", img: "../img/hoodieAlfaRomeo.jpg" },
   { name: "Alfa Romeo cap 2023", stock: 99, price: 50, id: "4", idCategory: "caps", idTeam: "alfa-romeo", logo: "../img/logoAlfaRomeo.svg", description: "", img: "../img/capAlfaRomeo.jpg" },

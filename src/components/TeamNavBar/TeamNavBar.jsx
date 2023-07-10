@@ -1,43 +1,65 @@
 import { NavLink } from "react-router-dom";
 
 const TeamNavBar = () => {
-
   return (
     <div className="col-span-12">
-      <ul className="flex justify-center my-4">
-        <li className="m-4">
-          <NavLink className="focus:bg-black focus:text-white focus:border-2 focus:border-red-500 rounded-xl p-2" to={"/team/alfa-romeo"}>Alfa Romeo</NavLink>
+      <ul className="flex flex-wrap justify-center my-4">
+        <li className="m-4 px-3">
+          <NavLink to={"/team/alfa-romeo"}>
+            <span className="group-hover:bg-gray-200">Alfa Romeo</span>
+          </NavLink>
         </li>
-        <li className="m-4">
-          <NavLink className="focus:bg-blue-950 focus:text-white focus:border-2 focus:border-black rounded-xl p-2" to={"/team/alpha-tauri"}>AlphaTauri</NavLink>
+        <li className="m-4 px-3">
+          <NavLink to={"/team/alpha-tauri"}>
+            <span className="group-hover:bg-gray-200">AlphaTauri</span>
+          </NavLink>
         </li>
-        <li className="m-4">
-          <NavLink className="focus:bg-black focus:text-white focus:border-2 focus:border-blue-400 rounded-xl p-2" to={"/team/alpine"}>Alpine</NavLink>
+        <li className="m-4 px-3">
+          <NavLink to={"/team/alpine"}>
+            <span className="group-hover:bg-gray-200">Alpine</span>
+          </NavLink>
         </li>
-        <li className="m-4">
-          <NavLink className="focus:bg-green-600 focus:text-white focus:border-2 focus:border-yellow-200 rounded-xl p-2" to={"/team/aston-martin"}>Aston Martin</NavLink>
+        <li className="m-4 px-3">
+          <NavLink to={"/team/aston-martin"}>
+            <span className="group-hover:bg-gray-200">Aston Martin</span>
+          </NavLink>
         </li>
-        <li className="m-4">
-          <NavLink className="focus:bg-red-500 focus:text-white focus:border-2 focus:border-black rounded-xl p-2" to={"/team/ferrari"}>Ferrari</NavLink>
+        <li className="m-4 px-3">
+          <NavLink to={"/team/ferrari"}>
+            <span className="group-hover:bg-gray-200">Ferrari</span>
+          </NavLink>
         </li>
-        <li className="m-4">
-          <NavLink className="focus:bg-black focus:text-white focus:border-2 focus:border-red-500 rounded-xl p-2" to={"/team/haas"}>Haas</NavLink>
+        <li className="m-4 px-3">
+          <NavLink to={"/team/haas"}>
+            <span className="group-hover:bg-gray-200">Haas</span>
+          </NavLink>
         </li>
-        <li className="m-4">
-          <NavLink className="focus:bg-orange-400 focus:text-white focus:border-2 focus:border-black rounded-xl p-2" to={"/team/mclaren"}>McLaren</NavLink>
+        <li className="m-4 px-3">
+          <NavLink to={"/team/mclaren"}>
+            <span className="group-hover:bg-gray-200">McLaren</span>
+          </NavLink>
         </li>
-        <li className="m-4">
-          <NavLink className="focus:bg-black focus:text-white focus:border-2 focus:border-red-500 rounded-xl p-2" to={"/team/mercedes"}>Mercedes</NavLink>
+        <li className="m-4 px-3">
+          <NavLink to={"/team/mercedes"}>
+            <span className="group-hover:bg-gray-200">Mercedes</span>
+          </NavLink>
         </li>
-        <li className="m-4">
-          <NavLink className="focus:bg-blue-950 focus:text-white focus:border-2 focus:border-red-500 rounded-xl p-2" to={"/team/red-bull"}>Red Bull</NavLink>
+        <li className="m-4 px-3">
+          <NavLink to={"/team/red-bull"}>
+            <span className="group-hover:bg-gray-200">Red Bull</span>
+          </NavLink>
         </li>
-        <li className="m-4">
-          <NavLink className="focus:bg-blue-950 focus:text-white focus:border-2 focus:border-blue-400 rounded-xl p-2" to={"/team/williams"}>Williams</NavLink>
+        <li className="m-4 px-3">
+          <NavLink to={"/team/williams"}>
+            <span className="group-hover:bg-gray-200">Williams</span>
+          </NavLink>
         </li>
       </ul>
     </div>
-  )
+  );
 }
 
-export default TeamNavBar
+export default TeamNavBar;
+
+
+

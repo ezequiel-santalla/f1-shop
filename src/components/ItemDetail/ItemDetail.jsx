@@ -34,11 +34,11 @@ const ItemDetail = ({ name, price, id, img, logo, stock }) => {
 
   return (
     <div className="grid grid-cols-12 gap-4 mt-6">
-      <div className="grid row-span-2 col-span-6 content-center">
+      <div className="grid row-span-2 col-span-12 sm:col-span-6 content-center">
         <img className="w-80 justify-self-center" src={img} alt={name} />
       </div>
 
-      <div className="col-span-4">
+      <div className="col-span-12 sm:col-span-6 md:col-span-4 sm:px-4 md:px-0">
         <div className="grid grid-cols-12 items-center mb-5">
           <img className="w-8 self-center" src={logo} alt="logo Scuderia" />
           <p className="text-md font-normal col-span-5">Officially Licensed Gear</p>
@@ -57,48 +57,48 @@ const ItemDetail = ({ name, price, id, img, logo, stock }) => {
             <button
               onClick={() => handleSizeButtonClick('S')}
               className={`col-span-2 border-2 bg-white border-black rounded-md font-medium my-1 me-3 ${
-                selectedSize === 'S' ? 'bg-red-500 border-red-600 text-white duration-500' : 'duration-500'
-              } hover:bg-red-500 hover:border-red-600 hover:text-white`}
+                selectedSize === 'S' ? 'bg-red-600 border-red-600 text-white duration-500' : 'duration-500'
+              } hover:bg-red-600 hover:border-red-600 hover:text-white`}
             >
               S
             </button>
             <button
               onClick={() => handleSizeButtonClick('M')}
               className={`col-span-2 border-2 bg-white border-black rounded-md font-medium my-1 me-3 ${
-                selectedSize === 'M' ? 'bg-red-500 border-red-600 text-white duration-500' : 'duration-500'
-              } hover:bg-red-500 hover:border-red-600 hover:text-white`}
+                selectedSize === 'M' ? 'bg-red-600 border-red-600 text-white duration-500' : 'duration-500'
+              } hover:bg-red-600 hover:border-red-600 hover:text-white`}
             >
               M
             </button>
             <button
               onClick={() => handleSizeButtonClick('L')}
               className={`col-span-2 border-2 bg-white border-black rounded-md font-medium my-1 me-3 ${
-                selectedSize === 'L' ? 'bg-red-500 border-red-600 text-white duration-500' : 'duration-500'
-              } hover:bg-red-500 hover:border-red-600 hover:text-white`}
+                selectedSize === 'L' ? 'bg-red-600 border-red-600 text-white duration-500' : 'duration-500'
+              } hover:bg-red-600 hover:border-red-600 hover:text-white`}
             >
               L
             </button>
             <button
               onClick={() => handleSizeButtonClick('XL')}
               className={`col-span-2 border-2 bg-white border-black rounded-md font-medium my-1 me-3 ${
-                selectedSize === 'XL' ? 'bg-red-500 border-red-600 text-white duration-500' : 'duration-500'
-              } hover:bg-red-500 hover:border-red-600 hover:text-white`}
+                selectedSize === 'XL' ? 'bg-red-600 border-red-600 text-white duration-500' : 'duration-500'
+              } hover:bg-red-600 hover:border-red-600 hover:text-white`}
             >
               XL
             </button>
             <button
               onClick={() => handleSizeButtonClick('2XL')}
               className={`col-span-2 border-2 bg-white border-black rounded-md font-medium my-1 me-3 ${
-                selectedSize === '2XL' ? 'bg-red-500 border-red-600 text-white duration-500' : 'duration-500'
-              } hover:bg-red-500 hover:border-red-600 hover:text-white`}
+                selectedSize === '2XL' ? 'bg-red-600 border-red-600 text-white duration-500' : 'duration-500'
+              } hover:bg-red-600 hover:border-red-600 hover:text-white`}
             >
               2XL
             </button>
             <button
               onClick={() => handleSizeButtonClick('3XL')}
               className={`col-span-2 border-2 bg-white border-black rounded-md font-medium my-1 me-3 ${
-                selectedSize === '3XL' ? 'bg-red-500 border-red-600 text-white duration-500' : 'duration-500'
-              } hover:bg-red-500 hover:border-red-600 hover:text-white`}
+                selectedSize === '3XL' ? 'bg-red-600 border-red-600 text-white duration-500' : 'duration-500'
+              } hover:bg-red-600 hover:border-red-600 hover:text-white`}
             >
               3XL
             </button>
@@ -110,11 +110,8 @@ const ItemDetail = ({ name, price, id, img, logo, stock }) => {
               <button onClick={increase}> + </button>
             </div>
 
-            <button
-              onClick={quantityHandler}
-              className={`grid grid-cols-12 col-span-9 self-center justify-items-end text-white bg-red-800 rounded-md py-2`}
-            >
-              <img className="col-span-5 w-6 justify-items-center mx-2" src={logo} alt="L" />
+            <button onClick={quantityHandler} className={`grid grid-cols-12 col-span-9 items-center bg-red-700 text-white font-medium justify-items-end rounded-md py-2`}>
+              <img className="col-span-5 w-6 justify-items-center mx-2" src={logo} alt="logo Scuderia" />
               <p className="col-span-7 self-center justify-self-start mx-2"> Add to Cart </p>
             </button>
           </div>
@@ -127,4 +124,5 @@ const ItemDetail = ({ name, price, id, img, logo, stock }) => {
 };
 
 export default ItemDetail;
+
 
