@@ -9,20 +9,12 @@ const ItemListContainer = () => {
   const {idTeam} = useParams();
 
   useEffect(() => {
-    const functionProducts = idCategory ? getProductsByCategory : getProducts;
+    const functionProducts = idCategory ? getProductsByCategory : idTeam ? getProductsByTeam : getProducts;
 
-    functionProducts(idCategory)
+    functionProducts(idCategory ? idCategory : idTeam)
       .then(res => setProducts(res))
       .catch(error => console.log(error))
-  }, [idCategory])
-
-  useEffect(() => {
-    const functionProducts = idTeam ? getProductsByTeam : getProducts;
-
-    functionProducts(idTeam)
-      .then(res => setProducts(res))
-      .catch(error => console.log(error))
-  }, [idTeam])
+  }, [idCategory, idTeam])
 
   return (
     <>
