@@ -4,7 +4,7 @@ import Title from "./components/Title/Title"
 import TeamNavBar from "./components/TeamNavBar/TeamNavBar"
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
-import Cart from "./components/CartWidget/CartWidget"
+import Cart from "./components/Cart/Cart"
 import { CartProvider } from "./context/CartContext"
 
 const App = () => (

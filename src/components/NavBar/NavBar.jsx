@@ -21,61 +21,27 @@ const NavBar = () => {
 
         <div className="w-full flex-grow lg:flex lg:items-center lg:justify-end lg:w-auto">
           <div className="lg:flex items-center mx-5 my-4 text-xl text-white font-medium">
-            <button
-              className="lg:hidden rounded-xl p-2"
-              onClick={toggleMenu}
-            >
-              <svg
-                className="fill-current h-5 w-5"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+            <button className="lg:hidden rounded-xl p-2" onClick={toggleMenu}>
+              <svg className="fill-current h-5 w-5" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <title>Menu</title>
-                <path
-                  d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"
-                />
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
               </svg>
             </button>
-            <ul
-              className={`${
-                menuOpen ? "block" : "hidden"
-              } lg:flex items-center me-5 my-4 text-xl lg:my-0 text-white font-medium`}
-            >
+            <ul className={`${menuOpen ? "block" : "hidden"} lg:flex items-center me-5 my-4 text-xl lg:my-0 text-white font-medium`}>
               <li className="mt-4 lg:flex lg:mt-0 lg:mx-4">
-                <NavLink
-                  className="rounded-xl p-2"
-                  to={"/category/t-shirts"}
-                  onClick={toggleMenu}
-                >
-                  T-shirts
-                </NavLink>
+                <NavLink className="rounded-xl p-2" onClick={toggleMenu} to={"/category/t-shirts"}>T-shirts</NavLink>
               </li>
-              <li className="mt-4 flex lg:mt-0 lg:mx-4">
-                <NavLink
-                  className="rounded-xl p-2"
-                  to={"/category/jackets"}
-                  onClick={toggleMenu}
-                >
-                  Jackets
-                </NavLink>
-              </li>
+
               <li className="mt-4 lg:flex lg:mt-0 lg:mx-4">
-                <NavLink
-                  className="rounded-xl p-2"
-                  to={"/category/hoodies"}
-                  onClick={toggleMenu}
-                >
-                  Hoodies
-                </NavLink>
+                <NavLink className="rounded-xl p-2" onClick={toggleMenu} to={"/category/jackets"}>Jackets</NavLink>
               </li>
+
               <li className="mt-4 lg:flex lg:mt-0 lg:mx-4">
-                <NavLink
-                  className="rounded-xl p-2"
-                  to={"/category/caps"}
-                  onClick={toggleMenu}
-                >
-                  Caps
-                </NavLink>
+                <NavLink className="rounded-xl p-2" onClick={toggleMenu} to={"/category/hoodies"}>Hoodies</NavLink>
+              </li>
+
+              <li className="mt-4 lg:flex lg:mt-0 lg:mx-4">
+                <NavLink className="rounded-xl p-2" onClick={toggleMenu} to={"/category/caps"}>Caps</NavLink>
               </li>
             </ul>
           </div>
