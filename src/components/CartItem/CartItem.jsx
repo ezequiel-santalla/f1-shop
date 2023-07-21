@@ -6,7 +6,7 @@ const CartItem = ({ item, quantity }) => {
   const { removeProduct } = useContext(CartContext);
 
   return (
-    <div className="grid grid-cols-12 items-center m-8 border-b-2 pb-8">
+    <div className="grid grid-cols-12 items-center m-12 pb-8 border-b-2">
       <div className="col-start-2">
         <img className='w-32' src={item.img} alt={item.name} />
       </div>
@@ -26,4 +26,6 @@ const CartItem = ({ item, quantity }) => {
 };
 
 export default CartItem;
+
+
 

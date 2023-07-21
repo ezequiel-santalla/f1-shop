@@ -25,16 +25,18 @@ const Cart = () => {
       {cart.map((product) => (
         <CartItem key={product.id} {...product} />
       ))}
-      <div className="grid grid-cols-12 gap-1 m-12">
+      <div className="grid grid-cols-12 m-12">
         <p className="col-span-12 sm:col-start-2 sm:col-end-12 md:col-end-11">Subtotal: U$D {totalPrice.toFixed(2)}</p>
         <p className="col-span-12 sm:col-start-2 sm:col-end-12 md:col-end-11">Estimated Tax: U$D {(totalPrice * 0.21).toFixed(2)}</p>
         <h1 className="col-span-12 sm:col-start-2 sm:col-end-12 md:col-end-11 font-bold text-xl">Total: U$D {(totalPrice * 1.21).toFixed(2)}{" "}</h1>
-        <button className="col-span-12 sm:col-start-2 sm:col-end-13">
-          <Link className="flex gap-2 items-center justify-end" to="/checkout">
-            <p className="">Buy Now</p>
-            <img className="" src={flag} alt="flag" />
-          </Link>
-        </button>
+        <div className="col-span-12 sm:col-start-12 sm:col-end-12 md:col-end-12">
+          <button className="col-span-12 sm:col-start-2 sm:col-end-13">
+            <Link className="flex gap-2 items-center justify-end" to="/checkout">
+              <p className="">Buy Now</p>
+              <img className="" src={flag} alt="flag" />
+            </Link>
+          </button>
+        </div>
       </div>
     </>
   );

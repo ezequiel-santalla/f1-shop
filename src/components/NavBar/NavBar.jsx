@@ -12,7 +12,7 @@ const NavBar = () => {
 
   return (
     <header className="bg-black">
-      <nav className="flex items-center justify-between flex-wrap bg-black p-2 relative">
+      <nav className="flex items-center justify-between flex-wrap bg-black relative">
         <div className="flex items-center flex-shrink-0 text-white mr-6 hover:scale-105">
           <Link to={"/"}>
             <img className="w-56 m-4" src={f1Logo} alt="F1 Logo" />

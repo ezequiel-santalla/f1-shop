@@ -5,6 +5,7 @@ import TeamNavBar from "./components/TeamNavBar/TeamNavBar"
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
 import Cart from "./components/Cart/Cart"
+import Checkout from './components/Checkout/Checkout';
 import { CartProvider } from "./context/CartContext"
 
 const App = () => (
@@ -20,7 +21,7 @@ const App = () => (
           <Route path="/team/:idTeam" element={<ItemListContainer/>} />
           <Route path="/item/:idItem" element={<ItemDetailContainer/>} />
           <Route path="/cart" element={<Cart/>} />
-          <Route path="/checkout" element={<h2>Checkout</h2>} />
+          <Route path="/checkout" element={<Checkout/>} />
         </Routes>
       </CartProvider>
     </BrowserRouter>
