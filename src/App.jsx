@@ -5,7 +5,7 @@ import TeamNavBar from "./components/TeamNavBar/TeamNavBar"
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
 import Cart from "./components/Cart/Cart"
-import Checkout from './components/Checkout/Checkout';
+import Checkout from './components/Checkout/Checkout'
 import { CartProvider } from "./context/CartContext"
 
 const App = () => (
