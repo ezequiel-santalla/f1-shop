@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 import f1Logo from "../../../public/f1Logo.png";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -13,7 +14,7 @@ const NavBar = () => {
   return (
     <header className="bg-black">
       <nav className="flex items-center justify-between flex-wrap bg-black relative">
-        <div className="flex items-center flex-shrink-0 text-white mr-6 hover:scale-105">
+        <div className="flex items-center flex-shrink-0 text-white mr-6 hover:scale-105 duration-500">
           <Link to={"/"}>
             <img className="w-56 m-4" src={f1Logo} alt="F1 Logo" />
           </Link>
@@ -28,19 +29,19 @@ const NavBar = () => {
               </svg>
             </button>
             <ul className={`${menuOpen ? "block" : "hidden"} lg:flex items-center me-5 my-4 text-xl lg:my-0 text-white font-medium`}>
-              <li className="mt-4 lg:flex lg:mt-0 lg:mx-4">
+              <li className={`mt-4 lg:flex lg:mt-0 lg:mx-4 hover:bg-white hover:text-black ${location.pathname === "/category/t-shirts" ? "bg-white text-black rounded-md" : "hover:rounded-md"} duration-300`}>
                 <NavLink className="rounded-xl p-2" onClick={toggleMenu} to={"/category/t-shirts"}>T-shirts</NavLink>
               </li>
 
-              <li className="mt-4 lg:flex lg:mt-0 lg:mx-4">
+              <li className={`mt-4 lg:flex lg:mt-0 lg:mx-4 hover:bg-white hover:text-black ${location.pathname === "/category/jackets" ? "bg-white text-black rounded-md" : "hover:rounded-md"} duration-300`}>
                 <NavLink className="rounded-xl p-2" onClick={toggleMenu} to={"/category/jackets"}>Jackets</NavLink>
               </li>
 
-              <li className="mt-4 lg:flex lg:mt-0 lg:mx-4">
+              <li className={`mt-4 lg:flex lg:mt-0 lg:mx-4 hover:bg-white hover:text-black ${location.pathname === "/category/hoodies" ? "bg-white text-black rounded-md" : "hover:rounded-md"} duration-300`}>
                 <NavLink className="rounded-xl p-2" onClick={toggleMenu} to={"/category/hoodies"}>Hoodies</NavLink>
               </li>
 
-              <li className="mt-4 lg:flex lg:mt-0 lg:mx-4">
+              <li className={`mt-4 lg:flex lg:mt-0 lg:mx-4 hover:bg-white hover:text-black ${location.pathname === "/category/caps" ? "bg-white text-black rounded-md" : "hover:rounded-md"} duration-300`}>
                 <NavLink className="rounded-xl p-2" onClick={toggleMenu} to={"/category/caps"}>Caps</NavLink>
               </li>
             </ul>
@@ -54,4 +55,5 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
 

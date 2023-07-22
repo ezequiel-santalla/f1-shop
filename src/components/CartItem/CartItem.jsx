@@ -18,7 +18,7 @@ const CartItem = ({ item, quantity }) => {
       </div>
       <div>
         <button className="col-start-12" onClick={() => removeProduct(item.id)}>
-          <img src={crane} alt="crane" />
+          <img className="hover:origin-bottom hover:-rotate-12 hover:scale-105 duration-500" src={crane} alt="crane" />
         </button>
       </div>
     </div>

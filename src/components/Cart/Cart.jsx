@@ -31,8 +31,8 @@ const Cart = () => {
         <h1 className="col-span-12 sm:col-start-2 sm:col-end-12 md:col-end-11 font-bold text-xl">Total: U$D {(totalPrice * 1.21).toFixed(2)}{" "}</h1>
         <div className="col-span-12 sm:col-start-12 sm:col-end-12 md:col-end-12">
           <button className="col-span-12 sm:col-start-2 sm:col-end-13">
-            <Link className="flex gap-2 items-center justify-end" to="/checkout">
-              <p className="">Buy Now</p>
+            <Link className="flex gap-2 items-center justify-end hover:scale-105 duration-500" to="/checkout">
+              <p>Buy Now</p>
               <img className="" src={flag} alt="flag" />
             </Link>
           </button>

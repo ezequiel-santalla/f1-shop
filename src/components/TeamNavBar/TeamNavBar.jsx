@@ -1,58 +1,40 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const TeamNavBar = () => {
+  const location = useLocation();
+
   return (
     <div className="col-span-12">
-      <ul className="flex flex-wrap justify-center my-4">
-        <li className="m-4 px-3">
-          <NavLink to={"/team/alfa-romeo"}>
-            <span className="group-hover:bg-gray-200">Alfa Romeo</span>
-          </NavLink>
+      <ul className="flex flex-wrap justify-center items-center my-4">
+        <li className={`mx-4 p-3 ${location.pathname === "/team/alfa-romeo" ? "bg-black text-white rounded-md" : ""} hover:bg-black hover:text-white rounded-md duration-300`}>
+          <NavLink to={"/team/alfa-romeo"}>Alfa Romeo</NavLink>
         </li>
-        <li className="m-4 px-3">
-          <NavLink to={"/team/alpha-tauri"}>
-            <span className="group-hover:bg-gray-200">AlphaTauri</span>
-          </NavLink>
+        <li className={`mx-4 p-3 ${location.pathname === "/team/alpha-tauri" ? "bg-black text-white" : ""} hover:bg-black hover:text-white rounded-md duration-300`}>
+          <NavLink to={"/team/alpha-tauri"}>AlphaTauri</NavLink>
         </li>
-        <li className="m-4 px-3">
-          <NavLink to={"/team/alpine"}>
-            <span className="group-hover:bg-gray-200">Alpine</span>
-          </NavLink>
+        <li className={`mx-4 p-3 ${location.pathname === "/team/alpine" ? "bg-black text-white" : ""} hover:bg-black hover:text-white rounded-md duration-300`}>
+          <NavLink to={"/team/alpine"}>Alpine</NavLink>
         </li>
-        <li className="m-4 px-3">
-          <NavLink to={"/team/aston-martin"}>
-            <span className="group-hover:bg-gray-200">Aston Martin</span>
-          </NavLink>
+        <li className={`mx-4 p-3 ${location.pathname === "/team/aston-martin" ? "bg-black text-white" : ""} hover:bg-black hover:text-white rounded-md duration-300`}>
+          <NavLink to={"/team/aston-martin"}>Aston Martin</NavLink>
         </li>
-        <li className="m-4 px-3">
-          <NavLink to={"/team/ferrari"}>
-            <span className="group-hover:bg-gray-200">Ferrari</span>
-          </NavLink>
+        <li className={`mx-4 p-3 ${location.pathname === "/team/ferrari" ? "bg-black text-white" : ""} hover:bg-black hover:text-white rounded-md duration-300`}>
+          <NavLink to={"/team/ferrari"}>Ferrari</NavLink>
         </li>
-        <li className="m-4 px-3">
-          <NavLink to={"/team/haas"}>
-            <span className="group-hover:bg-gray-200">Haas</span>
-          </NavLink>
+        <li className={`mx-4 p-3 ${location.pathname === "/team/haas" ? "bg-black text-white" : ""} hover:bg-black hover:text-white rounded-md duration-300`}>
+          <NavLink to={"/team/haas"}>Haas</NavLink>
         </li>
-        <li className="m-4 px-3">
-          <NavLink to={"/team/mclaren"}>
-            <span className="group-hover:bg-gray-200">McLaren</span>
-          </NavLink>
+        <li className={`mx-4 p-3 ${location.pathname === "/team/mclaren" ? "bg-black text-white" : ""} hover:bg-black hover:text-white rounded-md duration-300`}>
+          <NavLink to={"/team/mclaren"}>McLaren</NavLink>
         </li>
-        <li className="m-4 px-3">
-          <NavLink to={"/team/mercedes"}>
-            <span className="group-hover:bg-gray-200">Mercedes</span>
-          </NavLink>
+        <li className={`mx-4 p-3 ${location.pathname === "/team/mercedes" ? "bg-black text-white" : ""} hover:bg-black hover:text-white rounded-md duration-300`}>
+          <NavLink to={"/team/mercedes"}>Mercedes</NavLink>
         </li>
-        <li className="m-4 px-3">
-          <NavLink to={"/team/red-bull"}>
-            <span className="group-hover:bg-gray-200">Red Bull</span>
-          </NavLink>
+        <li className={`mx-4 p-3 ${location.pathname === "/team/red-bull" ? "bg-black text-white" : ""} hover:bg-black hover:text-white rounded-md duration-300`}>
+          <NavLink to={"/team/red-bull"}>Red Bull</NavLink>
         </li>
-        <li className="m-4 px-3">
-          <NavLink to={"/team/williams"}>
-            <span className="group-hover:bg-gray-200">Williams</span>
-          </NavLink>
+        <li className={`mx-4 p-3 ${location.pathname === "/team/williams" ? "bg-black text-white" : ""} hover:bg-black hover:text-white rounded-md duration-300`}>
+          <NavLink to={"/team/williams"}>Williams</NavLink>
         </li>
       </ul>
     </div>
@@ -60,6 +42,8 @@ const TeamNavBar = () => {
 }
 
 export default TeamNavBar;
+
+
 
 
 

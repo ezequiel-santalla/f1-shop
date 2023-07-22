@@ -112,18 +112,20 @@ const ItemDetail = ({ name, price, id, idTeam, idCat, img, logo, stock, descript
         </div>
       </div>
 
-      <div className="grid grid-cols-2">
-        <button>{addQuantity > 0 && <Link to="/">Keep buying</Link>}</button>
-        <button>{addQuantity > 0 && <Link to="/cart">Finish purchase</Link>}</button>
+      <div className='col-span-2 gap-2'>
+        {addQuantity > 0 && (
+          <>
+            <button className="m-2 p-2 border-2 rounded-xl bg-red-500 border-red-700 text-white font-medium hover:bg-red-700 duration-300">
+              <Link to="/">Keep buying</Link>
+            </button>
+            <button className="m-2 p-2 border-2 rounded-xl bg-red-500 border-red-700 text-white font-medium hover:bg-red-700 duration-300">
+              <Link to="/cart">Finish purchase</Link>
+            </button>
+          </>
+        )}
       </div>
     </div>
   );
 };
 
 export default ItemDetail;
-
-
-
-
-
-
